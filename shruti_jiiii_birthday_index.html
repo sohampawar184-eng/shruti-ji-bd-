@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#160f2e">
+<meta name="description" content="A little birthday universe made for Shruti jiiii.">
+<title>For Shruti Jiiii ✨</title>
+<style>
+:root{--ink:#241538;--plum:#5d315f;--pink:#ff8fbd;--rose:#ed5d9b;--cream:#fff8fc;--lav:#d9c5ff;--gold:#ffe5a6}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:ui-rounded,system-ui,-apple-system,"Segoe UI",sans-serif;background:#160f2e;overflow-x:hidden}
+button,input{font:inherit}button{border:0;border-radius:999px;padding:14px 22px;background:linear-gradient(135deg,#ff9bc5,#e85b9c);color:#351632;font-weight:800;box-shadow:0 10px 30px #f06ba544;cursor:pointer;transition:.2s}
+button:hover{transform:translateY(-2px)}button:active{transform:scale(.97)}button.secondary{background:#ffffff16;color:#fff;border:1px solid #ffffff55;box-shadow:none}
+button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+section{padding:78px 18px;min-height:78vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;isolation:isolate}
+.hero{min-height:100svh;color:white;overflow:hidden;background:radial-gradient(ellipse at 50% 25%,#59336d 0,#24183e 43%,#160f2e 78%)}
+.stars,.stars:before,.stars:after{position:absolute;inset:0;content:"";pointer-events:none;background-image:radial-gradient(2px 2px at 20px 30px,#fff 60%,transparent),radial-gradient(1px 1px at 90px 80px,#ffe5a6 60%,transparent),radial-gradient(1.5px 1.5px at 150px 140px,#fff 60%,transparent);background-size:190px 190px;opacity:.65;animation:twinkle 5s ease-in-out infinite alternate;z-index:-1}
+.stars:before{transform:translate(70px,35px);opacity:.5}.stars:after{transform:translate(130px,90px);opacity:.35}
+.orbit{font-size:4.5rem;filter:drop-shadow(0 0 22px #ff9bc5);animation:float 3s ease-in-out infinite}
+.kicker{letter-spacing:4px;text-transform:uppercase;font-size:.72rem;font-weight:850;color:#ffd9ea}
+h1{font-size:clamp(2.9rem,12vw,6rem);line-height:.98;letter-spacing:-3px;margin:20px 0;color:#fff;text-shadow:0 0 35px #f18dbb77}
+h1 span{color:#ffabd0}h2{font-size:clamp(2rem,7vw,3.2rem);margin:12px 0 18px;line-height:1.08}
+p{line-height:1.8;max-width:590px;margin:10px auto}.hero p{color:#f6ddec}.hero-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:22px}
+.card{width:min(100%,600px);padding:clamp(22px,5vw,36px);border-radius:30px;background:#fff9f1;box-shadow:0 22px 65px #10091e35;border:1px solid #fff}
+.eyebrow{font-size:.8rem;letter-spacing:2px;text-transform:uppercase;font-weight:850;color:#a34a78}
+.light-section{background:linear-gradient(145deg,#fff7fb,#f4eaff);color:var(--ink)}
+.dark-section{background:linear-gradient(145deg,#211638,#38214c);color:white}
+.dark-section .card{background:#fff9f1;color:var(--ink)}
+.hidden{display:none!important}.muted{opacity:.72;font-size:.88rem}
+.pill{display:inline-block;padding:7px 13px;border-radius:99px;background:#fce0ed;color:#8b3d69;font-size:.8rem;font-weight:800}
+.countdown{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:25px 0}
+.timebox{min-width:72px;padding:14px 10px;border-radius:18px;background:#ffffff18;border:1px solid #ffffff30;color:white}
+.timebox b{display:block;font-size:1.8rem;color:#ffe0ed}.timebox span{font-size:.68rem;letter-spacing:1px;text-transform:uppercase}
+.progress{height:5px;width:min(100%,480px);background:#f4c5dc;border-radius:99px;overflow:hidden;margin:25px auto 0}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#ed5d9b,#a77aff);transition:width .5s}
+.gift{font-size:6rem;display:inline-block;cursor:pointer;animation:float 2.3s ease-in-out infinite;filter:drop-shadow(0 10px 12px #e75b9b55)}
+.gift.open{animation:pop .6s forwards}.cake{font-size:5.5rem;animation:float 2.8s ease-in-out infinite}
+.reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px auto;max-width:650px;width:100%}
+.reason{min-height:130px;padding:18px 12px;border-radius:20px;background:#fff;color:#5b315f;box-shadow:0 8px 24px #26163a12;display:flex;flex-direction:column;justify-content:center;gap:9px}
+.reason b{font-size:1.5rem}.reason span{font-size:.85rem;font-weight:750}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;width:min(100%,600px);margin:22px auto}
+.polaroid{padding:9px 9px 15px;background:white;color:#57344e;box-shadow:0 10px 25px #28133922;transform:rotate(-2deg);border-radius:8px}
+.polaroid:nth-child(even){transform:rotate(2deg)}.polaroid img,.placeholder{width:100%;height:175px;object-fit:cover;border-radius:4px;background:linear-gradient(140deg,#ffe1ef,#e9ddff)}
+.placeholder{display:grid;place-items:center;font-size:3rem}.polaroid p{font-size:.78rem;margin:8px 0 0}
+input[type=file]{max-width:100%;margin:12px 0}
+.envelope-wrap{perspective:900px;margin:24px auto}.envelope{width:min(280px,75vw);height:175px;margin:auto;position:relative;background:#f5b8d2;border-radius:8px;box-shadow:0 15px 35px #210e2b35;cursor:pointer}
+.envelope:before{content:"";position:absolute;inset:0;background:#ffd7e7;clip-path:polygon(0 0,100% 0,50% 58%);z-index:2;transform-origin:top;transition:transform .7s}
+.envelope:after{content:"💌";position:absolute;inset:0;display:grid;place-items:center;font-size:3rem}
+.envelope.open:before{transform:rotateX(180deg)}
+.letter{background:white;border-radius:22px;padding:25px;text-align:left;line-height:1.9;white-space:pre-line;box-shadow:0 12px 35px #31163814}
+.letter-sign{text-align:right;font-style:italic;color:#a34a78}
+.final-heart{font-size:5rem;animation:pulse 1.5s infinite}.footer{padding:35px 16px 50px;text-align:center;color:#f9ddec;background:#160f2e;font-size:.85rem}
+.float-heart{position:fixed;bottom:-50px;pointer-events:none;z-index:20;animation:rise 6s linear forwards}
+@keyframes rise{to{transform:translateY(-115vh) rotate(35deg);opacity:0}}@keyframes pulse{50%{transform:scale(1.12)}}@keyframes float{50%{transform:translateY(-10px) rotate(3deg)}}@keyframes twinkle{to{opacity:.25;transform:scale(1.03)}}@keyframes pop{35%{transform:scale(1.2) rotate(-10deg)}100%{transform:scale(.9)}}
+@media(max-width:430px){section{padding:62px 15px}.reasons{grid-template-columns:1fr}.reason{min-height:90px;flex-direction:row;align-items:center}.polaroid img,.placeholder{height:140px}h1{letter-spacing:-2px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<section class="hero" id="home">
+<div class="stars"></div>
+<div class="kicker">A little universe made just for you</div>
+<div class="orbit">🌙</div>
+<h1>Happy Birthday,<br><span>Shruti jiiii!</span></h1>
+<p>Some people deserve more than a simple birthday text… so here's a tiny world of wishes, smiles and little surprises, made just for you. 🌷</p>
+<div class="countdown" id="countdown">
+<div class="timebox"><b id="days">00</b><span>Days</span></div>
+<div class="timebox"><b id="hours">00</b><span>Hours</span></div>
+<div class="timebox"><b id="minutes">00</b><span>Minutes</span></div>
+<div class="timebox"><b id="seconds">00</b><span>Seconds</span></div>
+</div>
+<p id="countdownCaption" class="muted">Counting down to your special day · 12 November</p>
+<div class="hero-actions">
+<button onclick="startJourney()">Enter your birthday universe ✨</button>
+<button class="secondary" onclick="toggleMusic()" id="musicButton">♫ Play soft instrumental</button>
+</div>
+<p id="musicStatus" class="muted">Optional music: add a licensed MP3 named <b>soft-romantic-instrumental.mp3</b> beside this HTML file.</p>
+<audio id="bgMusic" loop preload="none"><source src="soft-romantic-instrumental.mp3" type="audio/mpeg"></audio>
+</section>
+
+<section class="light-section" id="welcome">
+<div class="eyebrow">Chapter 01 · A wish from the heart</div>
+<div class="card">
+<span class="pill">For the birthday girl 🌸</span>
+<h2>Today, the universe celebrates you.</h2>
+<p>May your days be full of unexpected happiness, your plans turn into beautiful memories, and may you always find reasons to be proud of yourself.</p>
+<p>Never forget how much light you bring just by being yourself. ✨</p>
+<div class="progress"><span id="progressBar"></span></div>
+<button onclick="goTo('gift')">There's a surprise waiting →</button>
+</div>
+</section>
+
+<section class="dark-section" id="gift">
+<div class="eyebrow" style="color:#ffd9ea">Chapter 02 · A little magic</div>
+<h2>Something is hiding inside…</h2>
+<div class="card">
+<div class="gift" id="giftIcon" role="button" tabindex="0" aria-label="Open the birthday gift" onclick="openGift()">🎁</div>
+<p id="giftHint">Tap the gift to unwrap a little wish.</p>
+<div id="giftReveal" class="hidden">
+<h2>Surprise, Shruti jiiii! 💗</h2>
+<p>I hope this year gives you the courage to chase every dream, the calm to enjoy every little moment, and the kind of people who make life feel lighter.</p>
+<p>Keep glowing in your own way. 🦋</p>
+<button onclick="goTo('cake')">One more surprise →</button>
+</div>
+</div>
+</section>
+
+<section class="light-section" id="cake">
+<div class="eyebrow">Chapter 03 · Make a wish</div>
+<h2>A cake, just for you 🎂</h2>
+<div class="card">
+<div class="cake" id="cakeEmoji">🎂</div>
+<p id="cakeWords">Close your eyes for a second, make a wish, and tap below when you're ready.</p>
+<button id="wishButton" onclick="makeWish()">My wish is ready ✨</button>
+<p id="wishDone" class="hidden">Wish released into the universe. May it find its way to you. 🌠</p>
+</div>
+</section>
+
+<section class="dark-section" id="reasons">
+<div class="eyebrow" style="color:#ffd9ea">Chapter 04 · Little reminders</div>
+<h2>Three wishes for your new chapter</h2>
+<p>Tap each little card. They hold a wish for you.</p>
+<div class="reasons">
+<button class="reason" onclick="revealReason(this,'May you always believe in your own abilities. You are capable of more than you imagine. 💫')"><b>🌟</b><span>A little confidence</span></button>
+<button class="reason" onclick="revealReason(this,'May your life be filled with people who respect you, support you and make you laugh. 🌷')"><b>🫶</b><span>Genuine happiness</span></button>
+<button class="reason" onclick="revealReason(this,'May beautiful opportunities find you, and may you have the courage to take them. 🦋')"><b>🌈</b><span>Beautiful beginnings</span></button>
+</div>
+<p id="reasonMessage" class="muted" aria-live="polite">Choose a card to reveal its wish.</p>
+<button class="secondary" onclick="goTo('memories')">Next: your memory wall →</button>
+</section>
+
+<section class="light-section" id="memories">
+<div class="eyebrow">Chapter 05 · A little memory wall</div>
+<h2>Moments worth keeping 📸</h2>
+<p>Choose photos from your phone to preview them here. For her to see the photos too, the image files must be uploaded with the website.</p>
+<div class="card">
+<label for="photoUpload"><b>Add your favourite photos</b></label><br>
+<input id="photoUpload" type="file" accept="image/*" multiple>
+<p class="muted">You can add up to 8 photos. They preview on this device only until you upload them with the site.</p>
+</div>
+<div class="gallery" id="gallery">
+<div class="polaroid"><div class="placeholder">🌷</div><p>Little moments, big smiles</p></div>
+<div class="polaroid"><div class="placeholder">🦋</div><p>Memories in the making</p></div>
+<div class="polaroid"><div class="placeholder">🌈</div><p>More adventures ahead</p></div>
+<div class="polaroid"><div class="placeholder">💗</div><p>A page made with care</p></div>
+</div>
+<button onclick="goTo('letter')">Open your letter 💌</button>
+</section>
+
+<section class="dark-section" id="letter">
+<div class="eyebrow" style="color:#ffd9ea">Chapter 06 · A note from me</div>
+<h2>One little letter 💌</h2>
+<p>There's something I wanted to say with care.</p>
+<div class="envelope-wrap"><div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open the letter" onclick="openLetter()"></div></div>
+<p id="envelopeHint">Tap the envelope to open it.</p>
+<div id="letterBody" class="letter hidden">
+Dear Shruti jiiii, 💕
+
+Happy Birthday! 🥳🌷
+
+I wanted to make you something a little different because you deserve a birthday wish that feels special.
+
+You are someone special to me, and I genuinely wish you happiness, peace, confidence and beautiful opportunities in the year ahead.
+
+I also want to be honest, gently and without expecting anything from you: I have feelings for you. I respect how you feel, and I don't want this message to put any pressure on you. You don't need to reply to this part or feel you have to say anything back.
+
+Today is about celebrating you, not asking you for anything. I hope you smile a little while reading this, and that your birthday becomes a lovely memory.
+
+Happy Birthday once again, Shruti jiiii! 🎂💗
+
+<div class="letter-sign">— With warm wishes ♡</div>
+</div>
+<button id="finalButton" class="hidden" style="margin-top:22px" onclick="goTo('final')">One final thing… ✨</button>
+</section>
+
+<section class="light-section" id="final">
+<div class="final-heart">💖</div>
+<div class="eyebrow">The last little wish</div>
+<h2>Keep shining, Shruti jiiii.</h2>
+<div class="card">
+<p>May this new chapter be full of laughter that makes your cheeks hurt, dreams that come true, peaceful days, and people who appreciate the person you are.</p>
+<p>Whatever this year brings, I hope it brings you so many reasons to smile. 🌸</p>
+<button onclick="celebrate()">Send a sky full of hearts 🎉</button>
+<p id="finalMessage" class="hidden">A whole universe of birthday wishes, just for you! 💗✨</p>
+</div>
+<button class="secondary" style="margin-top:20px;background:#fff;color:#8b3d69;border-color:#f3c6dc" onclick="goTo('home')">Back to the beginning ↑</button>
+</section>
+<footer class="footer">Made with care, a little courage & lots of 💗<br>For Shruti jiiii · 12 November</footer>
+
+<script>
+const birthday = new Date(2026,10,12,0,0,0).getTime();
+function updateCountdown(){
+ const now=Date.now(),diff=birthday-now;
+ if(diff<=0){document.getElementById("countdown").innerHTML="<div class='timebox' style='padding:18px 24px'><b>🎂</b><span>It's your day!</span></div>";document.getElementById("countdownCaption").textContent="Happy Birthday, Shruti jiiii!";return;}
+ const units=[Math.floor(diff/86400000),Math.floor(diff%86400000/3600000),Math.floor(diff%3600000/60000),Math.floor(diff%60000/1000)];
+ ["days","hours","minutes","seconds"].forEach((id,i)=>document.getElementById(id).textContent=String(units[i]).padStart(2,"0"));
+}
+updateCountdown();setInterval(updateCountdown,1000);
+function goTo(id){document.getElementById(id).scrollIntoView({behavior:"smooth"});}
+function startJourney(){goTo("welcome");document.getElementById("progressBar").style.width="15%";confetti();}
+function toggleMusic(){
+ const audio=document.getElementById("bgMusic"),btn=document.getElementById("musicButton"),status=document.getElementById("musicStatus");
+ if(audio.paused){audio.play().then(()=>{btn.textContent="Ⅱ Pause music";status.textContent="Soft instrumental playing ♡";}).catch(()=>{status.textContent="Add soft-romantic-instrumental.mp3 beside this file, then try again.";});}
+ else{audio.pause();btn.textContent="♫ Play soft instrumental";status.textContent="Music paused."; }
+}
+function openGift(){document.getElementById("giftReveal").classList.remove("hidden");document.getElementById("giftIcon").classList.add("open");document.getElementById("giftHint").textContent="A little wish, wrapped just for you. 💗";document.getElementById("progressBar").style.width="30%";confetti();}
+document.getElementById("giftIcon").addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openGift();}});
+function makeWish(){document.getElementById("cakeEmoji").textContent="🧁✨";document.getElementById("cakeWords").textContent="May your wish become a beautiful part of your story.";document.getElementById("wishDone").classList.remove("hidden");document.getElementById("wishButton").classList.add("hidden");document.getElementById("progressBar").style.width="45%";confetti();}
+function revealReason(button,message){document.querySelectorAll(".reason").forEach(x=>x.style.outline="none");button.style.outline="3px solid #ff9bc5";document.getElementById("reasonMessage").textContent=message;document.getElementById("progressBar").style.width="60%";}
+function openLetter(){document.getElementById("envelope").classList.add("open");document.getElementById("letterBody").classList.remove("hidden");document.getElementById("envelopeHint").textContent="A little message, written with care. ♡";document.getElementById("finalButton").classList.remove("hidden");document.getElementById("progressBar").style.width="85%";confetti();}
+document.getElementById("envelope").addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openLetter();}});
+function celebrate(){document.getElementById("finalMessage").classList.remove("hidden");document.getElementById("progressBar").style.width="100%";confetti();}
+function confetti(){const symbols=["💗","💕","✨","🌸","💖","🦋","🎉","⭐"];for(let i=0;i<26;i++){const el=document.createElement("span");el.className="float-heart";el.textContent=symbols[Math.floor(Math.random()*symbols.length)];el.style.left=Math.random()*100+"vw";el.style.fontSize=(18+Math.random()*22)+"px";el.style.animationDuration=(4+Math.random()*4)+"s";document.body.appendChild(el);setTimeout(()=>el.remove(),8500);}}
+document.getElementById("photoUpload").addEventListener("change",function(){const gallery=document.getElementById("gallery");gallery.innerHTML="";Array.from(this.files).slice(0,8).forEach((file,i)=>{if(!file.type.startsWith("image/"))return;const url=URL.createObjectURL(file);const frame=document.createElement("div");frame.className="polaroid";const img=document.createElement("img");img.src=url;img.alt="Birthday memory "+(i+1);const caption=document.createElement("p");caption.textContent="A little memory 💗";frame.append(img,caption);gallery.appendChild(frame);});});
+</script>
+</body>
+</html>
